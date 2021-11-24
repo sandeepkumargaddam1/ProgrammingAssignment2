@@ -3,7 +3,7 @@
 #set and get the value of the inverse
 
 #inverse returned after computation 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix(sample(1:100,4),2,2)) {
          i <- NULL
   set <- function(y) {
           x <<- y
@@ -21,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-#icacheSolve should retrieve the inverse from the cache matrix returned from makeCacheMatrix
+#cacheSolve should retrieve the inverse from the cache matrix returned from makeCacheMatrix
 cacheSolve <- function(x, ...) {
          i <- x$getinverse()
   if (!is.null(i)) {
